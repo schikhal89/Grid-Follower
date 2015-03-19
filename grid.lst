@@ -1,0 +1,443 @@
+   1               		.file	"grid.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__CCP__  = 0x34
+   6               	__tmp_reg__ = 0
+   7               	__zero_reg__ = 1
+  15               	.Ltext0:
+  16               	.global	halfspeed_fwd
+  18               	halfspeed_fwd:
+  19               	.LFB6:
+  20               	.LM1:
+  21               	/* prologue: function */
+  22               	/* frame size = 0 */
+  23               	.LM2:
+  24 0000 81B3      		in r24,49-32
+  25 0002 806F      		ori r24,lo8(-16)
+  26 0004 81BB      		out 49-32,r24
+  27               	.LM3:
+  28 0006 80E5      		ldi r24,lo8(80)
+  29 0008 82BB      		out 50-32,r24
+  30               	.LBB54:
+  31               	.LBB55:
+  32               	.LBB56:
+  33               	.LBB57:
+  34               	.LM4:
+  35 000a 80E4      		ldi r24,lo8(-25536)
+  36 000c 9CE9      		ldi r25,hi8(-25536)
+  37 000e FC01      		movw r30,r24
+  38               	.LVL0:
+  39               	/* #APP */
+  40               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  41 0010 3197      		1: sbiw r30,1
+  42 0012 01F4      		brne 1b
+  43               	 ;  0 "" 2
+  44               	/* #NOAPP */
+  45               	.LBE57:
+  46               	.LBE56:
+  47               	.LBE55:
+  48               	.LBE54:
+  49               	.LM5:
+  50 0014 12BA      		out 50-32,__zero_reg__
+  51               	.LBB58:
+  52               	.LBB59:
+  53               	.LBB60:
+  54               	.LBB61:
+  55               	.LM6:
+  56               	/* #APP */
+  57               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+  58 0016 0197      		1: sbiw r24,1
+  59 0018 01F4      		brne 1b
+  60               	 ;  0 "" 2
+  61               	.LVL1:
+  62               	/* epilogue start */
+  63               	/* #NOAPP */
+  64               	.LBE61:
+  65               	.LBE60:
+  66               	.LBE59:
+  67               	.LBE58:
+  68               	.LM7:
+  69 001a 0895      		ret
+  70               	.LFE6:
+  72               	.global	fullspeed_fwd
+  74               	fullspeed_fwd:
+  75               	.LFB7:
+  76               	.LM8:
+  77               	/* prologue: function */
+  78               	/* frame size = 0 */
+  79               	.LM9:
+  80 001c 81B3      		in r24,49-32
+  81 001e 806F      		ori r24,lo8(-16)
+  82 0020 81BB      		out 49-32,r24
+  83               	.LM10:
+  84 0022 82B3      		in r24,50-32
+  85 0024 8065      		ori r24,lo8(80)
+  86 0026 82BB      		out 50-32,r24
+  87               	.LM11:
+  88 0028 82B3      		in r24,50-32
+  89 002a 8F75      		andi r24,lo8(95)
+  90 002c 82BB      		out 50-32,r24
+  91               	/* epilogue start */
+  92               	.LM12:
+  93 002e 0895      		ret
+  94               	.LFE7:
+  96               	.global	halfspeed_bck
+  98               	halfspeed_bck:
+  99               	.LFB8:
+ 100               	.LM13:
+ 101               	/* prologue: function */
+ 102               	/* frame size = 0 */
+ 103               	.LM14:
+ 104 0030 81B3      		in r24,49-32
+ 105 0032 806F      		ori r24,lo8(-16)
+ 106 0034 81BB      		out 49-32,r24
+ 107               	.LM15:
+ 108 0036 82B3      		in r24,50-32
+ 109 0038 806A      		ori r24,lo8(-96)
+ 110 003a 82BB      		out 50-32,r24
+ 111               	.LBB62:
+ 112               	.LBB63:
+ 113               	.LBB64:
+ 114               	.LBB65:
+ 115               	.LM16:
+ 116 003c 80E4      		ldi r24,lo8(-25536)
+ 117 003e 9CE9      		ldi r25,hi8(-25536)
+ 118 0040 FC01      		movw r30,r24
+ 119               	.LVL2:
+ 120               	/* #APP */
+ 121               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 122 0042 3197      		1: sbiw r30,1
+ 123 0044 01F4      		brne 1b
+ 124               	 ;  0 "" 2
+ 125               	/* #NOAPP */
+ 126               	.LBE65:
+ 127               	.LBE64:
+ 128               	.LBE63:
+ 129               	.LBE62:
+ 130               	.LM17:
+ 131 0046 12BA      		out 50-32,__zero_reg__
+ 132               	.LBB66:
+ 133               	.LBB67:
+ 134               	.LBB68:
+ 135               	.LBB69:
+ 136               	.LM18:
+ 137               	/* #APP */
+ 138               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 139 0048 0197      		1: sbiw r24,1
+ 140 004a 01F4      		brne 1b
+ 141               	 ;  0 "" 2
+ 142               	.LVL3:
+ 143               	/* epilogue start */
+ 144               	/* #NOAPP */
+ 145               	.LBE69:
+ 146               	.LBE68:
+ 147               	.LBE67:
+ 148               	.LBE66:
+ 149               	.LM19:
+ 150 004c 0895      		ret
+ 151               	.LFE8:
+ 153               	.global	fullspeed_bck
+ 155               	fullspeed_bck:
+ 156               	.LFB9:
+ 157               	.LM20:
+ 158               	/* prologue: function */
+ 159               	/* frame size = 0 */
+ 160               	.LM21:
+ 161 004e 81B3      		in r24,49-32
+ 162 0050 806F      		ori r24,lo8(-16)
+ 163 0052 81BB      		out 49-32,r24
+ 164               	.LM22:
+ 165 0054 82B3      		in r24,50-32
+ 166 0056 806A      		ori r24,lo8(-96)
+ 167 0058 82BB      		out 50-32,r24
+ 168               	.LM23:
+ 169 005a 82B3      		in r24,50-32
+ 170 005c 8F7A      		andi r24,lo8(-81)
+ 171 005e 82BB      		out 50-32,r24
+ 172               	/* epilogue start */
+ 173               	.LM24:
+ 174 0060 0895      		ret
+ 175               	.LFE9:
+ 177               	.global	halfspeed_right
+ 179               	halfspeed_right:
+ 180               	.LFB10:
+ 181               	.LM25:
+ 182               	/* prologue: function */
+ 183               	/* frame size = 0 */
+ 184               	.LM26:
+ 185 0062 81B3      		in r24,49-32
+ 186 0064 806F      		ori r24,lo8(-16)
+ 187 0066 81BB      		out 49-32,r24
+ 188               	.LM27:
+ 189 0068 949A      		sbi 50-32,4
+ 190               	.LM28:
+ 191 006a 82B3      		in r24,50-32
+ 192 006c 8F71      		andi r24,lo8(31)
+ 193 006e 82BB      		out 50-32,r24
+ 194               	.LBB70:
+ 195               	.LBB71:
+ 196               	.LBB72:
+ 197               	.LBB73:
+ 198               	.LM29:
+ 199 0070 80E4      		ldi r24,lo8(-25536)
+ 200 0072 9CE9      		ldi r25,hi8(-25536)
+ 201 0074 FC01      		movw r30,r24
+ 202               	.LVL4:
+ 203               	/* #APP */
+ 204               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 205 0076 3197      		1: sbiw r30,1
+ 206 0078 01F4      		brne 1b
+ 207               	 ;  0 "" 2
+ 208               	/* #NOAPP */
+ 209               	.LBE73:
+ 210               	.LBE72:
+ 211               	.LBE71:
+ 212               	.LBE70:
+ 213               	.LM30:
+ 214 007a 12BA      		out 50-32,__zero_reg__
+ 215               	.LBB74:
+ 216               	.LBB75:
+ 217               	.LBB76:
+ 218               	.LBB77:
+ 219               	.LM31:
+ 220               	/* #APP */
+ 221               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 222 007c 0197      		1: sbiw r24,1
+ 223 007e 01F4      		brne 1b
+ 224               	 ;  0 "" 2
+ 225               	.LVL5:
+ 226               	/* epilogue start */
+ 227               	/* #NOAPP */
+ 228               	.LBE77:
+ 229               	.LBE76:
+ 230               	.LBE75:
+ 231               	.LBE74:
+ 232               	.LM32:
+ 233 0080 0895      		ret
+ 234               	.LFE10:
+ 236               	.global	fullspeed_right
+ 238               	fullspeed_right:
+ 239               	.LFB11:
+ 240               	.LM33:
+ 241               	/* prologue: function */
+ 242               	/* frame size = 0 */
+ 243               	.LM34:
+ 244 0082 81B3      		in r24,49-32
+ 245 0084 806F      		ori r24,lo8(-16)
+ 246 0086 81BB      		out 49-32,r24
+ 247               	.LM35:
+ 248 0088 949A      		sbi 50-32,4
+ 249               	.LM36:
+ 250 008a 82B3      		in r24,50-32
+ 251 008c 8F71      		andi r24,lo8(31)
+ 252 008e 82BB      		out 50-32,r24
+ 253               	/* epilogue start */
+ 254               	.LM37:
+ 255 0090 0895      		ret
+ 256               	.LFE11:
+ 258               	.global	halfspeed_left
+ 260               	halfspeed_left:
+ 261               	.LFB12:
+ 262               	.LM38:
+ 263               	/* prologue: function */
+ 264               	/* frame size = 0 */
+ 265               	.LM39:
+ 266 0092 81B3      		in r24,49-32
+ 267 0094 806F      		ori r24,lo8(-16)
+ 268 0096 81BB      		out 49-32,r24
+ 269               	.LM40:
+ 270 0098 969A      		sbi 50-32,6
+ 271               	.LM41:
+ 272 009a 82B3      		in r24,50-32
+ 273 009c 8F74      		andi r24,lo8(79)
+ 274 009e 82BB      		out 50-32,r24
+ 275               	.LBB78:
+ 276               	.LBB79:
+ 277               	.LBB80:
+ 278               	.LBB81:
+ 279               	.LM42:
+ 280 00a0 80E4      		ldi r24,lo8(-25536)
+ 281 00a2 9CE9      		ldi r25,hi8(-25536)
+ 282 00a4 FC01      		movw r30,r24
+ 283               	.LVL6:
+ 284               	/* #APP */
+ 285               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 286 00a6 3197      		1: sbiw r30,1
+ 287 00a8 01F4      		brne 1b
+ 288               	 ;  0 "" 2
+ 289               	/* #NOAPP */
+ 290               	.LBE81:
+ 291               	.LBE80:
+ 292               	.LBE79:
+ 293               	.LBE78:
+ 294               	.LM43:
+ 295 00aa 12BA      		out 50-32,__zero_reg__
+ 296               	.LBB82:
+ 297               	.LBB83:
+ 298               	.LBB84:
+ 299               	.LBB85:
+ 300               	.LM44:
+ 301               	/* #APP */
+ 302               	 ;  105 "c:/winavr-20100110/lib/gcc/../../avr/include/util/delay_basic.h" 1
+ 303 00ac 0197      		1: sbiw r24,1
+ 304 00ae 01F4      		brne 1b
+ 305               	 ;  0 "" 2
+ 306               	.LVL7:
+ 307               	/* epilogue start */
+ 308               	/* #NOAPP */
+ 309               	.LBE85:
+ 310               	.LBE84:
+ 311               	.LBE83:
+ 312               	.LBE82:
+ 313               	.LM45:
+ 314 00b0 0895      		ret
+ 315               	.LFE12:
+ 317               	.global	fullspeed_left
+ 319               	fullspeed_left:
+ 320               	.LFB13:
+ 321               	.LM46:
+ 322               	/* prologue: function */
+ 323               	/* frame size = 0 */
+ 324               	.LM47:
+ 325 00b2 81B3      		in r24,49-32
+ 326 00b4 806F      		ori r24,lo8(-16)
+ 327 00b6 81BB      		out 49-32,r24
+ 328               	.LM48:
+ 329 00b8 969A      		sbi 50-32,6
+ 330               	.LM49:
+ 331 00ba 82B3      		in r24,50-32
+ 332 00bc 8F74      		andi r24,lo8(79)
+ 333 00be 82BB      		out 50-32,r24
+ 334               	/* epilogue start */
+ 335               	.LM50:
+ 336 00c0 0895      		ret
+ 337               	.LFE13:
+ 339               	.global	checkpin
+ 341               	checkpin:
+ 342               	.LFB14:
+ 343               	.LM51:
+ 344               	.LVL8:
+ 345               	/* prologue: function */
+ 346               	/* frame size = 0 */
+ 347               	/* epilogue start */
+ 348               	.LM52:
+ 349 00c2 0895      		ret
+ 350               	.LFE14:
+ 352               	.global	main
+ 354               	main:
+ 355               	.LFB15:
+ 356               	.LM53:
+ 357               	/* prologue: function */
+ 358               	/* frame size = 0 */
+ 359               	.LM54:
+ 360 00c4 8AB3      		in r24,58-32
+ 361 00c6 8873      		andi r24,lo8(56)
+ 362 00c8 8ABB      		out 58-32,r24
+ 363               	.LM55:
+ 364 00ca BC9A      		sbi 55-32,4
+ 365               	.LM56:
+ 366 00cc 81B3      		in r24,49-32
+ 367 00ce 806F      		ori r24,lo8(-16)
+ 368 00d0 81BB      		out 49-32,r24
+ 369               	.L26:
+ 370               	.LM57:
+ 371 00d2 C899      		sbic 57-32,0
+ 372 00d4 00C0      		rjmp .L20
+ 373 00d6 CF99      		sbic 57-32,7
+ 374 00d8 00C0      		rjmp .L20
+ 375 00da CE99      		sbic 57-32,6
+ 376 00dc 00C0      		rjmp .L20
+ 377 00de CA99      		sbic 57-32,2
+ 378 00e0 00C0      		rjmp .L20
+ 379 00e2 C999      		sbic 57-32,1
+ 380 00e4 00C0      		rjmp .L20
+ 381               	.LM58:
+ 382 00e6 0E94 0000 		call halfspeed_fwd
+ 383               	.L20:
+ 384               	.LM59:
+ 385 00ea CE99      		sbic 57-32,6
+ 386 00ec 00C0      		rjmp .L21
+ 387 00ee CF9B      		sbis 57-32,7
+ 388 00f0 00C0      		rjmp .L21
+ 389 00f2 C89B      		sbis 57-32,0
+ 390 00f4 00C0      		rjmp .L21
+ 391               	.LM60:
+ 392 00f6 0E94 0000 		call fullspeed_fwd
+ 393               	.L21:
+ 394               	.LM61:
+ 395 00fa CE9B      		sbis 57-32,6
+ 396 00fc 00C0      		rjmp .L26
+ 397 00fe CF9B      		sbis 57-32,7
+ 398 0100 00C0      		rjmp .L26
+ 399 0102 C89B      		sbis 57-32,0
+ 400 0104 00C0      		rjmp .L26
+ 401               	.LM62:
+ 402 0106 0E94 0000 		call halfspeed_right
+ 403               	.LM63:
+ 404 010a CE99      		sbic 57-32,6
+ 405 010c 00C0      		rjmp .L26
+ 406 010e CF9B      		sbis 57-32,7
+ 407 0110 00C0      		rjmp .L26
+ 408 0112 C89B      		sbis 57-32,0
+ 409 0114 00C0      		rjmp .L26
+ 410               	.LM64:
+ 411 0116 0E94 0000 		call halfspeed_fwd
+ 412               	.LM65:
+ 413 011a C899      		sbic 57-32,0
+ 414 011c 00C0      		rjmp .L26
+ 415 011e CF99      		sbic 57-32,7
+ 416 0120 00C0      		rjmp .L26
+ 417 0122 CE99      		sbic 57-32,6
+ 418 0124 00C0      		rjmp .L26
+ 419 0126 CA99      		sbic 57-32,2
+ 420 0128 00C0      		rjmp .L26
+ 421 012a C999      		sbic 57-32,1
+ 422 012c 00C0      		rjmp .L26
+ 423               	.LM66:
+ 424 012e 0E94 0000 		call halfspeed_left
+ 425               	.LM67:
+ 426 0132 CE99      		sbic 57-32,6
+ 427 0134 00C0      		rjmp .L26
+ 428 0136 CF9B      		sbis 57-32,7
+ 429 0138 00C0      		rjmp .L26
+ 430 013a C89B      		sbis 57-32,0
+ 431 013c 00C0      		rjmp .L26
+ 432               	.LM68:
+ 433 013e 0E94 0000 		call fullspeed_fwd
+ 434               	.LM69:
+ 435 0142 C899      		sbic 57-32,0
+ 436 0144 00C0      		rjmp .L26
+ 437 0146 CF99      		sbic 57-32,7
+ 438 0148 00C0      		rjmp .L26
+ 439 014a CE99      		sbic 57-32,6
+ 440 014c 00C0      		rjmp .L26
+ 441 014e CA99      		sbic 57-32,2
+ 442 0150 00C0      		rjmp .L26
+ 443 0152 C999      		sbic 57-32,1
+ 444 0154 00C0      		rjmp .L26
+ 445               	.LM70:
+ 446 0156 0E94 0000 		call halfspeed_fwd
+ 447 015a 00C0      		rjmp .L26
+ 448               	.LFE15:
+ 546               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 grid.c
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:2      *ABS*:0000003f __SREG__
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:3      *ABS*:0000003e __SP_H__
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:4      *ABS*:0000003d __SP_L__
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:5      *ABS*:00000034 __CCP__
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:6      *ABS*:00000000 __tmp_reg__
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:7      *ABS*:00000001 __zero_reg__
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:18     .text:00000000 halfspeed_fwd
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:74     .text:0000001c fullspeed_fwd
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:98     .text:00000030 halfspeed_bck
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:155    .text:0000004e fullspeed_bck
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:179    .text:00000062 halfspeed_right
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:238    .text:00000082 fullspeed_right
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:260    .text:00000092 halfspeed_left
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:319    .text:000000b2 fullspeed_left
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:341    .text:000000c2 checkpin
+C:\DOCUME~1\admin\LOCALS~1\Temp/cceVfzDp.s:354    .text:000000c4 main
+
+NO UNDEFINED SYMBOLS
